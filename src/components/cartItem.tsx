@@ -13,9 +13,10 @@ export default ({id, quantity}: itemProps) => {
     const item = storeItems.find(i => i.id === id);
     if(!item) return null;
 
+    const imageUrl = import.meta.env.BASE_URL + item.imgUrl;
     return (
         <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
-            <img src={item.imgUrl} style={{ width: '125px', height: '75px', objectFit: 'cover' }} />
+            <img src={imageUrl} style={{ width: '125px', height: '75px', objectFit: 'cover' }} />
             <div className="me-auto">
                 <div>
                     {item.name}{quantity > 1 && <span className="text-muted" style={{fontSize: '.65rem'}}> x{quantity}</span>}
