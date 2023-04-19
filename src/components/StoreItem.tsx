@@ -35,7 +35,7 @@ export default ({id, name, price, imgUrl}: StoreItemProps) => {
                                 </div>
                                 <Button>+</Button>
                             </div>
-                            <Button variant="danger" size="small">Remove</Button>
+                            <Button variant="danger" size="sm">Remove</Button>
                         </div>
                     )}
                 </div>
