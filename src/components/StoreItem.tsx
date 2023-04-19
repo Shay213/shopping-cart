@@ -12,12 +12,12 @@ interface StoreItemProps {
 export default ({id, name, price, imgUrl}: StoreItemProps) => {
     const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useShoppingCart();
     const quantity = getItemQuantity(id);
-    const imgUrl2 = new URL(imgUrl, import.meta.url).href
+    const imageUrl = import.meta.env.BASE_URL + imgUrl;
     return (
         <Card className="h-100">
             <Card.Img
                 variant="top"
-                src={imgUrl2}
+                src={imageUrl}
                 height="200px"
                 style={{objectFit: 'cover'}}
             />
