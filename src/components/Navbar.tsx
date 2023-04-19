@@ -16,13 +16,14 @@ export default () => {
                 <Button 
                     className='rounded-circle'
                     style={{width: '3rem', height: '3rem', position: 'relative'}}
+                    onClick={openCart}
                 >
                     <img src={shoppingCartSvg} />
                     <div 
                         className='rounded-circle bg-danger d-flex justify-content-center align-items-center'
                         style={{color: '#fff', width: '1.5rem', height: '1.5rem', position: 'absolute', bottom: 0, right: 0, transform: 'translate(25%, 25%)'}}
                     >
-                        3
+                        {cartQuantity}
                     </div>
                 </Button>
             </Container>
